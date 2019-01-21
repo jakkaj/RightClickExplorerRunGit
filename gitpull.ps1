@@ -26,7 +26,7 @@ $openText = "Git Pull here"
 createRegedit "HKCR:\Directory\Background\shell\git" $openText
 createRegedit "HKCR:\Directory\shell\git" $openText
 #git.exe pull -v --progress "origin"
-$commandText = "`"" + $jpcommand + "`" --git-dir=`"%V/.git`" pull -v --progress"
+$commandText = "`"" + $jpcommand + "`"--work-tree=`"%V`" --git-dir=`"%V/.git`" pull -v --progress"
 
 createRegedit "HKCR:\Directory\Background\shell\git\command" $commandText
 createRegedit "HKCR:\Directory\shell\git\command" $commandText
